@@ -33,5 +33,5 @@ This project welcomes contributions and suggestions.
 
 ## License
 
-Feel free to use, replicate or do whatever you'd want to do with the available content.
+Feel free to use, replicate or do whatever you'd want to do with the available content. This repository includes various content refrenced to/from Microsoft official documentation available on github
 
