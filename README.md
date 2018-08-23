@@ -10,7 +10,7 @@ This content will help you getting started with AKS and essentials of running ap
 
 
   1. [Deploy AKS Cluster](/1.Create-AKS-Cluster.MD)
-  2. [Deploy & run applications on AKS](/2.Deploy-Apps-on-AKS.MD.md)
+  2. [Deploy & run applications on AKS](/2.Deploy-Apps-on-AKS.MD)
   3. [Using Kubernetes Dashboard](/3.Kubernetes-Dashboard.MD)
   4. [Monitor AKS Health & Logs](/4.Monitor-Health-and-logs.MD)
   5. [Using Helm and NGINX Ingress Controller](/5.Publish-Applications-via-Ingress.MD	)
