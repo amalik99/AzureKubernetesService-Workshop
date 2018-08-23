@@ -22,8 +22,13 @@ This content will help you getting started with AKS and essentials of running ap
 
 Amit Malik  <br>
 Linkedin: https://www.linkedin.com/in/amitmalik99/ <br>
-E-mail: contact2amitmaliK@gmail.com
-  
+E-
+mail: contact2amitmaliK@gmail.com
+## Azure Voting App 
+
+Sample application used in the repo is developed and maintained here: https://github.com/Azure-Samples/azure-voting-app-redis
+
+
 ## Contributing
 
 This project welcomes contributions and suggestions, unless you are Bruce Wayne.  Most contributions require you to agree to a
