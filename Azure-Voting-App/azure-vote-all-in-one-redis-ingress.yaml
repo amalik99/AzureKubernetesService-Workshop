@@ -77,7 +77,7 @@ metadata:
     kubernetes.io/tls-acme: 'false'
 spec:
   rules:
-  - host:
+  - host: IP.xip.io
     http:
       paths:
         - path: /
