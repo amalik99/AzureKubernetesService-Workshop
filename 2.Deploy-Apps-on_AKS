@@ -1,0 +1,19 @@
+# Deploy the Superhero Ratings App to AKS
+
+## Review/Edit the YAML Config Files
+
+1. In Azure Cloud Shell edit `heroes-db.yaml` using `vi`
+    ```
+    cd ~/AzureKubernetesService-Workshop/Azure-Voting-App
+
+    vi azure-vote-all-in-one-redis.yaml
+    ```
+    * Review the yaml file and learn about some of the settings
+
+2. Deploy applications to AzureAKS
+
+* Use the kubectl CLI to deploy each app
+    ```
+
+    kubectl apply -f azure-vote-all-in-one-redis.yaml
+    ```
