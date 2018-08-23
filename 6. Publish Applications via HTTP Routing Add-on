@@ -1,0 +1,75 @@
+# HTTP application routing
+
+The HTTP application routing solution makes it easy to access applications that are deployed to your Azure Kubernetes Service (AKS) cluster. When the solution's enabled, it configures an Ingress controller in your AKS cluster. As applications are deployed, the solution also creates publically accessible DNS names for application endpoints.
+
+When the add-on is enabled, it creates a DNS Zone in your subscription. For more information about DNS cost, see [DNS pricing][dns-pricing].
+
+## HTTP routing solution overview
+
+The add-on deploys two components: a [Kubernetes Ingress controller][ingress] and an [External-DNS][external-dns] controller.
+
+- **Ingress controller**: The Ingress controller is exposed to the internet by using a Kubernetes service of type LoadBalancer. The Ingress controller watches and implements [Kubernetes Ingress resources][ingress-resource], which creates routes to application endpoints.
+- **External-DNS controller**: Watches for Kubernetes Ingress resources and creates DNS A records in the cluster-specific DNS zone.
+
+## Deploy HTTP routing: CLI
+
+The HTTP application routing add-on can be enabled with the Azure CLI when deploying an AKS cluster. To do so, use the [az aks create][az-aks-create] command with the `--enable-addons` argument.
+
+```azurecli
+az aks create --resource-group myResourceGroup --name myAKSCluster --enable-addons http_application_routing
+```
+
+You can also enable HTTP routing on an existing AKS cluster using the [az aks enable-addons][az-aks-enable-addons] command. To enable HTTP routing on an existing cluster, add the `--addons` parameter and specify *http_application_routing* as shown in the following example:
+
+```azurecli
+az aks enable-addons --resource-group myResourceGroup --name myAKSCluster --addons http_application_routing
+```
+
+After the cluster is deployed or updated, use the [az aks show][az-aks-show] command to retrieve the DNS zone name. This name is needed to deploy applications to the AKS cluster.
+
+```azurecli
+$ az aks show --resource-group myResourceGroup --name myAKSCluster --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName -o table
+
+Result
+-----------------------------------------------------
+9f9c1fe7-21a1-416d-99cd-3543bb92e4c3.eastus.aksapp.io
+```
+
+## Deploy HTTP routing: Portal
+
+The HTTP application routing add-on can be enabled through the Azure portal when deploying an AKS cluster.
+
+![Enable the HTTP routing feature](media/http-routing/create.png)
+
+After the cluster is deployed, browse to the auto-created AKS resource group and select the DNS zone. Take note of the DNS zone name. This name is needed to deploy applications to the AKS cluster.
+
+![Get the DNS zone name](media/http-routing/dns.png)
+
+## Use HTTP routing
+
+The HTTP application routing solution may only be triggered on Ingress resources that are annotated as follows:
+
+```yaml
+annotations:
+  kubernetes.io/ingress.class: addon-http-application-routing
+```
+
+
+Use the [kubectl apply][kubectl-apply] command to create the resources.
+
+```bash
+$ kubectl apply -f azure-vote-all-in-one-redis-http-addon.yaml	
+
+```
+
+Use cURL or a browser to navigate to the hostname specified in the host section of the samples-http-application-routing.yaml file. The application can take up to one minute before it's available via the internet.
+use ```kubectl get ingress``` to get the hostname provisioned
+
+
+## Remove HTTP routing
+
+The HTTP routing solution can be removed using the Azure CLI. To do so run the following command, substituting your AKS cluster and resource group name.
+
+```azurecli
+az aks disable-addons --addons http_application_routing --name myAKSCluster --resource-group myResourceGroup --no-wait
+```
