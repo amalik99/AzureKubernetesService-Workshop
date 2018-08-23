@@ -1,4 +1,4 @@
-# Azure Kubernetes Service-Workshop Bangalore Azure User Group
+# Azure Kubernetes Service-Workshop - Bangalore Azure User Group Event
 
 # Azure Container Hackfest
 
@@ -18,7 +18,7 @@ This content will help you getting started with AKS and essentials of running ap
   7. [Running Stateful Applications with AzureDisks](/7.Run-Stateful-Apps-with-disks.MD)
   8. [Upgrading AKS Cluster](/8.Upgrading-AKS-Cluster.MD)
 
-#Author and Maintainer
+# Author and Maintainer
 
 Amit Malik
 Linkedin: https://www.linkedin.com/in/amitmalik99/
