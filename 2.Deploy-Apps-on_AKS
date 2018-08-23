@@ -17,3 +17,16 @@
 
     kubectl apply -f azure-vote-all-in-one-redis.yaml
     ```
+3. Validate
+
+* Check to see if pods are running in your cluster
+    ```
+    kubectl get pods
+    
+* Check to see if services are deployed.
+    ```
+    kubectl get service
+    
+Browse to the External IP for your web application (on port 8080) and try the app
+
+> The public IP can take a few minutes to create with a new cluster. Sit back and relax. Maybe check Facebook. 
