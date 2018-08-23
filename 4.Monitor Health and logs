@@ -1,0 +1,17 @@
+## Monitor health and logs
+
+When the AKS cluster was created, monitoring was enabled to capture health metrics for both the cluster nodes and pods. These health metrics are available in the Azure portal. For more information on container health monitoring, see [Monitor Azure Kubernetes Service health][aks-monitor].
+
+To see current status, uptime, and resource usage for the Azure Vote pods, complete the following steps:
+
+1. Open a web browser to the Azure portal [https://portal.azure.com][azure-portal].
+1. Select your resource group, such as *myResourceGroup*, then select your AKS cluster, such as *myAKSCluster*. 
+1. Choose **Monitor container health** > select the **default** namespace > then select **Containers**.
+
+It may take a few minutes for this data to populate in the Azure portal, as shown in the following example:
+
+![Create AKS cluster one](https://github.com/MicrosoftDocs/azure-docs/raw/master/articles/aks/media/kubernetes-walkthrough/view-container-health.png)
+
+To see logs for the `azure-vote-front` pod, select the **View Logs** link on the right-hand side of the list of containers. These logs include the *stdout* and *stderr* streams from the container.
+
+![Create AKS cluster one](https://github.com/MicrosoftDocs/azure-docs/raw/master/articles/aks/media/kubernetes-walkthrough/view-container-logs.png)
