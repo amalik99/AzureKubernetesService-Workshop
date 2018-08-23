@@ -21,7 +21,7 @@ This content will help you getting started with AKS and essentials of running ap
 # Author and Maintainer
 
 Amit Malik  <br>
-Linkedin: https://www.linkedin.com/in/amitmalik99/
+Linkedin: https://www.linkedin.com/in/amitmalik99/ <br>
 E-mail: contact2amitmaliK@gmail.com
   
 ## Contributing
