@@ -66,8 +66,6 @@ spec:
   - port: 80
   selector:
     app: azure-vote-front
-    
-    
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -78,8 +76,8 @@ annotations:
     # Add to generate certificates for this ingress
     kubernetes.io/tls-acme: 'false'
 spec:
-rules:
-    - host:
+  rules:
+  - host:
     http:
         paths:
         - backend:
