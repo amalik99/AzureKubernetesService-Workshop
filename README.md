@@ -1,8 +1,6 @@
-# Azure Kubernetes Service-Workshop - Bangalore Azure User Group Event
+# Bangalore Azure User Group Event
 
-# Azure Container Hackfest
-
-_Delivering modern cloud native applications with ​open source technologies on Azure
+# Hands-on with Azure Kubernetes Services
 
 This content will help you getting started with AKS and essentials of running applications on AKS. This will also touch base aspects such as Ingress Controllers, Using Helm to deploy applications, running stateful applications such as DBs etc. 
 
