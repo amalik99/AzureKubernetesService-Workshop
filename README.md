@@ -15,6 +15,9 @@ This content will help you getting started with AKS and essentials of running ap
   6. [Publish Applications via AKS HTTP Routing](/6.Publish-Applications-via-HTTP-Routing-Add-on.MD)
   7. [Running Stateful Applications with AzureDisks](/7.Run-Stateful-Apps-with-disks.MD)
   8. [Upgrading AKS Cluster](/8.Upgrading-AKS-Cluster.MD)
+  
+### Sesstion Deck
+[Download Deck](/AzureKubernetesService-Amit Malik.pptx)
 
 # Author and Maintainer
 
