@@ -17,7 +17,7 @@ This content will help you getting started with AKS and essentials of running ap
   8. [Upgrading AKS Cluster](/8.Upgrading-AKS-Cluster.MD)
   
 ### Sesstion Deck
-[Download Deck](/AzureKubernetesService-Amit Malik.pptx)
+[Download Deck](/AzureKubernetesService-AmitMalik.pptx)
 
 # Author and Maintainer
 
